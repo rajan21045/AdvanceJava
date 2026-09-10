@@ -3,7 +3,7 @@ import java.awt.*;
 public class displayingImages extends JPanel{
     Image image;
     public displayingImages(){
-        image = new ImageIcon("images.jpg").getImage();
+        image = new ImageIcon("gifimage.gif").getImage();
     }
 
     @Override 
