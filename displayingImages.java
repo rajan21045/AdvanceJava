@@ -10,7 +10,7 @@ public class displayingImages extends JPanel{
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        g.drawImage(image, 50, 50, this);
+        g.drawImage(image, 50, 50, 400, 400, this);
     }
 
     public static void main(String[] args) {
