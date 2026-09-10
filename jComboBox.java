@@ -6,9 +6,6 @@ public class jComboBox {
         // Create JFrame
         JFrame frame = new JFrame("JComboBox Example");
         
-        // Array of items
-        String arr[] = {"BCA", "CSIT", "BBA", "MCA", "MBA"};
-        
         // Create JComboBox
         JComboBox<String> cmb = new JComboBox<String>();
 
