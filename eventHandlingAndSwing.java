@@ -18,7 +18,7 @@ class eventHandlingAndSwing extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(this, "Button clicked!");
+        System.out.println("Button clicked!");
     }
 
     public static void main(String[] args) {
