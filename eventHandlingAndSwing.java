@@ -22,6 +22,6 @@ class eventHandlingAndSwing extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(eventHandlingAndSwing::new);
+        new eventHandlingAndSwing();
     }
 }
