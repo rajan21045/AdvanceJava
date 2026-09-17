@@ -3,6 +3,7 @@ import javax.swing.*;
 
 public class displaying {
     public static void main(String[] args) {
+
         JFrame frame = new JFrame("Student Information");
         frame.setLayout(new FlowLayout());
 
