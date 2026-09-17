@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 public class backgroundColor {
+
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Background Color");
