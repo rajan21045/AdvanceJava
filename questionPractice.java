@@ -1,87 +1,69 @@
-// write a program to create a GUI application in java that identifies the smaller and greater number between two inputs numbers taken through two text fields and display the result in a label. 
-// if the user presses the mouse it should display the smaller number in the label and if the user releases the mouse it should display the greater number.
-
+/*
+Write a program to create a GUI application in java that identifies the smaller and greater number between two inputs numbers taken through two text fields and display the result in a label.
+if the user presses the mouse it should display the smaller number in the label and if the user releases the mouse it should display the greater number.
+*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-public class questionPractice{
+
+public class questionPractice extends JFrame {
+    public questionPractice() {
+        setTitle("Number Comparison");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(450, 220);
+        setLayout(new GridLayout(0, 2, 10, 10));
+
+        JLabel firstLabel = new JLabel("Enter First Number:");
+        JTextField firstNumberField = new JTextField();
+
+        JLabel secondLabel = new JLabel("Enter Second Number:");
+        JTextField secondNumberField = new JTextField();
+
+        JLabel resultTitle = new JLabel("Result");
+        JLabel resultLabel = new JLabel("Press mouse here to see smaller number");
+
+        add(firstLabel);
+        add(firstNumberField);
+        add(secondLabel);
+        add(secondNumberField);
+        add(resultTitle);
+        add(resultLabel);
+
+        resultLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                showComparison(resultLabel, firstNumberField.getText(), secondNumberField.getText(), true);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                showComparison(resultLabel, firstNumberField.getText(), secondNumberField.getText(), false);
+            }
+        });
+    }
+
     public static void main(String[] args) {
-        // Run the Swing code on the Event Dispatch Thread (EDT)
         SwingUtilities.invokeLater(() -> {
-            // Create the main window
-            JFrame frame = new JFrame("Number Comparison");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setLayout(new GridLayout(4, 2, 10, 10));
-            frame.setSize(450, 220);
-            frame.setLocationRelativeTo(null);
-
-            // First number label and text field
-            JLabel firstLabel = new JLabel("Enter First Number:");
-            JTextField firstNumberField = new JTextField();
-
-            // Second number label and text field
-            JLabel secondLabel = new JLabel("Enter Second Number:");
-            JTextField secondNumberField = new JTextField();
-
-            // Result label where the answer will be shown
-            JLabel resultTitle = new JLabel("Result");
-            JLabel resultLabel = new JLabel("Press mouse here to see smaller number");
-            resultLabel.setOpaque(true);
-            resultLabel.setBackground(new Color(240, 240, 240));
-            resultLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
-            resultLabel.setHorizontalAlignment(SwingConstants.CENTER);
-
-            // Add all components to the frame
-            frame.add(firstLabel);
-            frame.add(firstNumberField);
-            frame.add(secondLabel);
-            frame.add(secondNumberField);
-            frame.add(resultTitle);
-            frame.add(new JLabel());
-            frame.add(new JLabel());
-            frame.add(resultLabel);
-
-            // Add mouse listener to the result label
-            resultLabel.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mousePressed(MouseEvent e) {
-                    // When the mouse is pressed, display the smaller number
-                    showComparison(resultLabel, firstNumberField.getText(), secondNumberField.getText(), true);
-                }
-
-                @Override
-                public void mouseReleased(MouseEvent e) {
-                    // When the mouse is released, display the greater number
-                    showComparison(resultLabel, firstNumberField.getText(), secondNumberField.getText(), false);
-                }
-            });
-
-            // Make the frame visible
+            questionPractice frame = new questionPractice();
             frame.setVisible(true);
         });
     }
 
-    // This method compares the two entered numbers and updates the label
-    private static void showComparison(JLabel resultLabel, String firstText, String secondText, boolean isPressed) {
+    public static void showComparison(JLabel resultLabel, String firstNumberText, String secondNumberText, boolean isMousePressed) {
         try {
-            // Convert text inputs to double
-            double firstNumber = Double.parseDouble(firstText);
-            double secondNumber = Double.parseDouble(secondText);
+            double firstNumber = Double.parseDouble(firstNumberText);
+            double secondNumber = Double.parseDouble(secondNumberText);
 
-            // Find smaller and greater values
-            double smaller = Math.min(firstNumber, secondNumber);
-            double greater = Math.max(firstNumber, secondNumber);
-
-            // Display smaller on mouse press and greater on mouse release
-            if (isPressed) {
+            if (isMousePressed) {
+                double smaller = Math.min(firstNumber, secondNumber);
                 resultLabel.setText("Smaller Number: " + smaller);
             } else {
+                double greater = Math.max(firstNumber, secondNumber);
                 resultLabel.setText("Greater Number: " + greater);
             }
         } catch (NumberFormatException e) {
-            // If the user enters invalid input, show an error message
-            resultLabel.setText("Please enter valid numbers");
+            resultLabel.setText("Invalid input. Please enter valid numbers.");
         }
     }
 }
