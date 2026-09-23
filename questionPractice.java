@@ -1,6 +1,6 @@
 /*
-Write a program to create a GUI application in java that identifies the smaller and greater number between two inputs numbers taken through two text fields and display the result in a label.
-if the user presses the mouse it should display the smaller number in the label and if the user releases the mouse it should display the greater number.
+    Write a program to create a GUI application in java that identifies the smaller and greater number between two inputs numbers taken through two text fields and display the result in a label.
+    if the user presses the mouse it should display the smaller number in the label and if the user releases the mouse it should display the greater number.
 */
 import javax.swing.*;
 import java.awt.*;
