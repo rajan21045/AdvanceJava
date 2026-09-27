@@ -14,6 +14,7 @@ public class displaying {
         frame.add(name);
         frame.add(age);
         frame.add(course);
+
         frame.setSize(400, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
