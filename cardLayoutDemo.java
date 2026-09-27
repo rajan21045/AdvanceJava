@@ -4,7 +4,7 @@ import java.awt.*;
 class CardLayoutDemo extends JFrame {
     private JPanel cardPanel;
     private CardLayout cardLayout;
-
+ 
     public CardLayoutDemo() {
         setTitle("CardLayout Demo");
         setSize(400, 300);
