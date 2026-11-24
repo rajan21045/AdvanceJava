@@ -56,14 +56,6 @@ java YourProgram
 
 Replace `YourProgram` with the class name. If the file declares a `package`, compile and run from the project's source root using the fully qualified class name.
 
-## Chapters
-
-| Chapter | Topic | 
-| ------- | ----- | -------- |
-| [Chapter 1](CHAPTER%201) | GUI PROGRAMMING | 
-| [Chapter 2](CHAPTER%202) | DATABASE PROGRAMMING | 
-| [Chapter 3](CHAPTER%203) | JAVABEANS| 
-
 ## Contributing
 
 This is a personal learning repository, but suggestions and corrections are welcome. Open an issue or submit a pull request.
