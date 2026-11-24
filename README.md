@@ -58,7 +58,7 @@ Replace `YourProgram` with the class name. If the file declares a `package`, com
 
 ## Chapters
 
-| Chapter | Topic | Contents |
+| Chapter | Topic | 
 | ------- | ----- | -------- |
 | [Chapter 1](CHAPTER%201) | GUI PROGRAMMING | 
 | [Chapter 2](CHAPTER%202) | DATABASE PROGRAMMING | 
