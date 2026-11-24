@@ -60,9 +60,9 @@ Replace `YourProgram` with the class name. If the file declares a `package`, com
 
 | Chapter | Topic | Contents |
 | ------- | ----- | -------- |
-| [Chapter 1](CHAPTER%201) | _Add topic_ | _Add a short summary_ |
-| [Chapter 2](CHAPTER%202) | _Add topic_ | _Add a short summary_ |
-| [Chapter 3](CHAPTER%203) | _Add topic_ | _Add a short summary_ |
+| [Chapter 1](CHAPTER%201) | GUI PROGRAMMING | 
+| [Chapter 2](CHAPTER%202) | DATABASE PROGRAMMING | 
+| [Chapter 3](CHAPTER%203) | JAVABEANS| 
 
 ## Contributing
 
