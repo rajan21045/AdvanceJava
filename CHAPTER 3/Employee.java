@@ -1,5 +1,5 @@
-// Step 1: Create a public class
-// Step 5: Implement Serializable (for persistence)
+// Create a public class
+// Implement Serializable (for persistence)
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -9,17 +9,17 @@ public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    // Step 2: Declare private properties
+    // Declare private properties
     private String name;
     private int salary;
 
-    // Step 6: Add event support (notifies listeners when a property changes)
+    // Add event support (notifies listeners when a property changes)
     private final PropertyChangeSupport support = new PropertyChangeSupport(this);
 
-    // Step 3: Add a public no-arg constructor
+    // Add a public no-arg constructor
     public Employee() { }
 
-    // Step 4: Write public getters and setters
+    // Write public getters and setters
     public String getName() {
         return name;
     }
@@ -55,7 +55,7 @@ public class Employee implements Serializable {
         System.out.println("Salary: " + salary);
     }
 
-    // Step 7: Main method for running the bean with java Employee.java
+    // Main method for running the bean with java Employee.java
     public static void main(String[] args) {
         Employee emp = new Employee();
 
